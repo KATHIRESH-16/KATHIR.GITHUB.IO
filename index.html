@@ -2,243 +2,196 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>KATHIRESH A | Portfolio</title>
+<title>Faculty Period Alert (FPA)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<!-- AOS -->
-<link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
-
 <style>
-body{
-  font-family:'Poppins',sans-serif;
-  background:#0b0f19;
-  color:#f1f5f9;
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f0f2f7;
+  padding: 30px;
 }
-
-a{text-decoration:none;color:#38e8ff}
-
-.navbar{background:#020617}
-
-.hero span{color:#38e8ff}
-
-.section-title span{color:#38e8ff}
-
-.card{
-  background:#020617;
-  border:1px solid #1e293b;
-  transition:.4s;
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-
-.card:hover{
-  transform:translateY(-8px) scale(1.02);
-  box-shadow:0 0 20px #38e8ff40;
+h1 {
+  text-align: center;
+  color: #2c3e50;
 }
-
-.skill-bar{
-  background:#1e293b;
-  border-radius:20px;
-  overflow:hidden;
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
 }
-
-.skill-fill{
-  height:10px;
-  background:linear-gradient(90deg,#38e8ff,#22d3ee);
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  font-size: 15px;
 }
-
-.btn-main{
-  background:linear-gradient(90deg,#38e8ff,#22d3ee);
-  color:#020617;
-  font-weight:600;
+button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
-
-footer{background:#020617}
+button:hover {
+  background: #0056b3;
+}
+.section-title {
+  margin-top: 25px;
+  font-weight: bold;
+  color: #34495e;
+}
+.period {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f7fb;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+.period span {
+  font-weight: 500;
+}
+.delete-btn {
+  background: #dc3545;
+  padding: 6px 10px;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+.delete-btn:hover {
+  background: #a71d2a;
+}
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #666;
+}
 </style>
 </head>
-
 <body>
 
-<!-- NAV -->
-<nav class="navbar navbar-expand-lg fixed-top">
 <div class="container">
-  <a class="navbar-brand text-light fw-bold" href="#">Kathiresh</a>
+  <h1>Faculty Period Alert (FPA)</h1>
+
+  <div class="section-title">Add Faculty & Period</div>
+  <label>Faculty Name</label>
+  <input type="text" id="facultyName" placeholder="Enter faculty name">
+
+  <label>Period Time</label>
+  <input type="time" id="periodTime">
+
+  <button onclick="addPeriod()">Add Period</button>
+
+  <div class="section-title">Scheduled Periods</div>
+  <div id="periodList"></div>
+
+  <footer>
+    Developed by <strong>KATHIRESH</strong> <br>
+    Open Source • Hosted on GitHub Pages
+  </footer>
 </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero vh-100 d-flex align-items-center">
-<div class="container text-center" data-aos="fade-up">
-<h1 class="fw-bold">Hi, I'm <span>Kathiresh A</span></h1>
-<h5 class="mt-3">Motivated BCA Graduate</h5>
-<p class="mt-4 text-secondary">
-<p class="mt-4 text-secondary">
-  I am a motivated BCA graduate with a strong foundation in problem-solving and technical development
-  & am proactive in finding solutions and focused on improving processes through technical knowledge & i also I enjoy working in collaborative, team-oriented environments and continuously improving my skills in this upgrading genration.
-</p>
-
-</p>
-
-<a href="assets/KATHIRESH.pdf"download class="btn btn-main mt-3">Download Resume</a>
-
-</div>
-</section>
-
-<!-- SKILLS -->
-<section class="py-5" id="skills">
-  <div class="container">
-    <h2 class="section-title text-center mb-5" data-aos="fade-up">
-      <span>Skills</span>
-    </h2>
-
-<div class="row g-4">
-
-  <!-- Technical Skills -->
-  <div class="col-md-6" data-aos="fade-right">
-    <div class="card p-4 h-100">
-      <h4 class="mb-3 text-info">Technical Skills</h4>
-      <ul class="list-unstyled">
-        <li>✔ HTML</li>
-        <li>✔ CSS</li>
-        <li>✔ JavaScript</li>
-        <li>✔ Python</li>
-        <li>✔ Java</li>
-        <li>✔ Linux</li>
-        <li>✔ Git & GitHub</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Soft Skills -->
-  <div class="col-md-6" data-aos="fade-left">
-    <div class="card p-4 h-100">
-      <h4 class="mb-3 text-info">Soft Skills</h4>
-      <ul class="list-unstyled">
-        <li>✔ Communication</li>
-        <li>✔ Problem Solving</li>
-        <li>✔ Teamwork</li>
-        <li>✔ Good Leadership Quality</li>
-        <li>✔ Adaptability</li>
-        <li>✔ Quick Learner</li>
-      </ul>
-    </div>
-  </div>
-
-</div>
-<!-- EDUCATION & LANGUAGES -->
-<section class="py-5" id="education">
-  <div class="container">
-    <h2 class="section-title text-center mb-5" data-aos="fade-up">
-      <span>Education & Languages</span>
-    </h2>
-
-    <div class="row g-4">
-
-      <!-- Education -->
-      <div class="col-md-6" data-aos="fade-right">
-        <div class="card p-4 h-100">
-          <h4 class="mb-3 text-info">Education</h4>
-          <ul class="list-unstyled">
-            <li>🎓 BCA Degree - KG College of Arts and Science</li>
-            <li>🏛 University: Bharathiyar University</li>
-            <li>📅 Year of Graduation: 2023 - 2026</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Languages -->
-      <div class="col-md-6" data-aos="fade-left">
-        <div class="card p-4 h-100">
-          <h4 class="mb-3 text-info">Languages</h4>
-          <ul class="list-unstyled">
-            <li>🗣 English - Proficient</li>
-            <li>🗣 Tamil - Proficient</li>
-            <li>🗣 Telugu - Conversational</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-<!-- PROJECTS (GitHub API) -->
-<section class="py-5">
-<div class="container">
-<h2 class="section-title text-center mb-5" data-aos="fade-up"><span>GitHub Projects</span></h2>
-<div class="row g-4" id="projects"></div>
-</div>
-</section>
-
-<!-- CONTACT -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="section-title text-center mb-4" data-aos="fade-up">
-      <span>Contact Me</span>
-    </h2>
-
-    <form id="contact-form" class="col-md-6 mx-auto" data-aos="zoom-in">
-      <input class="form-control mb-3" name="name" placeholder="Your Name" required>
-      <input class="form-control mb-3" name="email" placeholder="Your Email" required>
-      <textarea class="form-control mb-3" name="message" placeholder="Message" required></textarea>
-      <button class="btn btn-main w-100">Send Message</button>
-    </form>
-
-    <div class="text-center mt-4" data-aos="fade-up">
-      <p>📧 Email: <a href="mailto:kathirmak16@gmail.com">kathirmak16@gmail.com</a></p>
-      <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/kathiresh-a-650897337" target="_blank">Kathiresh A</a></p>
-      <p>🐙 GitHub: <a href="https://github.com/KATHIRESH-16" target="_blank">KATHIRESH-16</a></p>
-    </div>
-  </div>
-</section>
-
-
-<!-- FOOTER -->
-<footer class="text-center py-3">
-<small>© 2025 Kathiresh A</small>
-</footer>
-
-<!-- JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
-AOS.init({duration:1000,once:true});
+// Load saved periods from localStorage
+let periods = JSON.parse(localStorage.getItem("periods")) || [];
 
-// EMAILJS CONFIG ⬇️ (REPLACE THESE)
-emailjs.init("YOUR_PUBLIC_KEY");
+// Add new period
+function addPeriod() {
+  const name = document.getElementById("facultyName").value.trim();
+  const time = document.getElementById("periodTime").value;
 
-document.getElementById("contact-form").addEventListener("submit",function(e){
-e.preventDefault();
-emailjs.sendForm("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",this)
-.then(()=>alert("Message Sent Successfully!"),
-()=>alert("Failed to send message"));
-});
+  if (!name || !time) {
+    alert("Please enter faculty name and period time.");
+    return;
+  }
 
-// GITHUB PROJECTS
-fetch("https://api.github.com/users/kathiresh-16/repos")
-.then(res=>res.json())
-.then(data=>{
-const container=document.getElementById("projects");
-data.slice(0,6).forEach(repo=>{
-container.innerHTML+=`
-<div class="col-md-4" data-aos="fade-up">
-<div class="card p-3 h-100">
-<h5>${repo.name}</h5>
-<p class="text-secondary">${repo.description || "No description"}</p>
-<a href="${repo.html_url}" target="_blank">View on GitHub →</a>
-</div>
-</div>`;
-});
-});
+  // Prevent duplicate
+  const exists = periods.some(p => p.name === name && p.time === time);
+  if (exists) {
+    alert("This period already exists.");
+    return;
+  }
+
+  periods.push({ name, time, earlySent: false, startSent: false });
+  saveAndRender();
+  document.getElementById("facultyName").value = "";
+  document.getElementById("periodTime").value = "";
+}
+
+// Delete period
+function deletePeriod(index) {
+  periods.splice(index, 1);
+  saveAndRender();
+}
+
+// Save to localStorage and render list
+function saveAndRender() {
+  localStorage.setItem("periods", JSON.stringify(periods));
+  renderPeriods();
+}
+
+// Render periods
+function renderPeriods() {
+  const list = document.getElementById("periodList");
+  list.innerHTML = "";
+  if (periods.length === 0) {
+    list.innerHTML = "<p>No periods scheduled yet.</p>";
+    return;
+  }
+  periods.forEach((p, i) => {
+    list.innerHTML += `
+      <div class="period">
+        <span>${p.name} — ${p.time}</span>
+        <button class="delete-btn" onclick="deletePeriod(${i})">Delete</button>
+      </div>
+    `;
+  });
+}
+renderPeriods();
+
+// Notification permission
+Notification.requestPermission();
+
+// Check time every minute
+setInterval(() => {
+  const now = new Date();
+  const currentMinutes = now.getHours() * 60 + now.getMinutes();
+
+  periods.forEach(p => {
+    const [h, m] = p.time.split(":");
+    const periodMinutes = (+h) * 60 + (+m);
+
+    // 5-minute early reminder
+    if (!p.earlySent && currentMinutes === periodMinutes - 5) {
+      new Notification("⏰ Upcoming Class Reminder", {
+        body: `${p.name}, your class starts in 5 minutes.`
+      });
+      p.earlySent = true;
+    }
+
+    // On-time alert
+    if (!p.startSent && currentMinutes === periodMinutes) {
+      new Notification("🔔 Period Started", {
+        body: `${p.name}, your class has started now.`
+      });
+      p.startSent = true;
+    }
+  });
+
+  localStorage.setItem("periods", JSON.stringify(periods));
+}, 60000);
 </script>
 
 </body>
